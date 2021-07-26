@@ -40,7 +40,7 @@ def sendingEmails():
 	server.login(email,password)
 	for i in range(int(sent_output)):
 		i = i+1
-		server.sendmail(gmail, reciv_output, msg_output)
+		server.sendmail(email, reciv_output, msg_output)
 		label = tk.Label(text = f"Email sent {i} times").grid(row = 4, column = 0)
 getInput_button = tk.Button(text = 'Send them out!', command = sendingEmails)
 getInput_button.grid(row = 3, column = 0)
