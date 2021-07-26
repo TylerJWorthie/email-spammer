@@ -6,8 +6,8 @@ try:
 except:
     #skipping making path
     print("")
-print("Must use gmail, working on update to use multiple types of email servies")
-email = input("What gmail would you like to use? ")
-pswrd = input("What pswrd is connected to this gmail? ")
+print("Just type in email and password")
+email = input("What email would you like to use? ")
+pswrd = input("What pswrd is connected to this email? ")
 eml = open(r"creds/email.txt","w+").writelines(email)
 password = open(r"creds/pswrd.txt", "w+").writelines(pswrd)
