@@ -3,7 +3,7 @@ import os
 import smtplib
 
 #Server Logins#
-gmail = open(r"creds/email.txt","r").read()
+email = open(r"creds/email.txt","r").read()
 password = open(r"creds/pswrd.txt", "r").read()
 #Server Info#
 serveradd = open(r"servers/smtpserver.txt", "r").read()
@@ -37,7 +37,7 @@ def sendingEmails():
 	sent_output = sent_input.get()
 	server = smtplib.SMTP(serveradd, serverport )
 	server.starttls()
-	server.login(gmail,password)
+	server.login(email,password)
 	for i in range(int(sent_output)):
 		i = i+1
 		server.sendmail(gmail, reciv_output, msg_output)
